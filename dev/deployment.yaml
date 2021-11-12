@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: categoryapi
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: categoryapi
   replicas: 2
   template:
     metadata:
       labels:
-        app: myapp
+        app: categoryapi
     spec:
       containers:
-      - name: myapp
-        image: nanajanashia/argocd-app:1.2
+      - name: categoryapi
+        image: satishlakshmiudemy/category-api:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 9595
